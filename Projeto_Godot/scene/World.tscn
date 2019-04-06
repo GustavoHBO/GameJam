@@ -1,17 +1,29 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://script/player/Player.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://script/seguranca/seguranca.gd" type="Script" id=3]
 
 [node name="World" type="Node2D"]
 
 [node name="Player" type="KinematicBody2D" parent="."]
 editor/display_folded = true
+position = Vector2( 352, 224 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="Player"]
+texture = ExtResource( 2 )
+
+[node name="Monstro" type="StaticBody2D" parent="."]
+position = Vector2( 640, 224 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Monstro"]
 texture = ExtResource( 2 )
 
