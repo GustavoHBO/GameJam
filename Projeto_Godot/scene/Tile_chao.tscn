@@ -1,0 +1,470 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://sprites/floor.png" type="Texture" id=1]
+[ext_resource path="res://sprites/floor_variation_1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/floor_variation_2.png" type="Texture" id=3]
+[ext_resource path="res://sprites/background.png" type="Texture" id=4]
+[ext_resource path="res://sprites/corner_bot_left.png" type="Texture" id=5]
+[ext_resource path="res://sprites/slim_path_bot_left.png" type="Texture" id=6]
+[ext_resource path="res://sprites/small_corner_bot_left.png" type="Texture" id=7]
+[ext_resource path="res://sprites/corner_bot_right.png" type="Texture" id=8]
+[ext_resource path="res://sprites/slim_path_bot_right.png" type="Texture" id=9]
+[ext_resource path="res://sprites/small_corner_bot_right.png" type="Texture" id=10]
+[ext_resource path="res://sprites/corner_top_left.png" type="Texture" id=11]
+[ext_resource path="res://sprites/small_corner_top_left.png" type="Texture" id=12]
+[ext_resource path="res://sprites/corner_top_right.png" type="Texture" id=13]
+[ext_resource path="res://sprites/small_corner_top_right.png" type="Texture" id=14]
+[ext_resource path="res://sprites/slim_path_connection.png" type="Texture" id=15]
+[ext_resource path="res://sprites/slim_path_crossing.png" type="Texture" id=16]
+[ext_resource path="res://sprites/slim_path_down.png" type="Texture" id=17]
+[ext_resource path="res://sprites/slim_path_left.png" type="Texture" id=18]
+[ext_resource path="res://sprites/slim_path_right.png" type="Texture" id=19]
+[ext_resource path="res://sprites/slim_path_three_way.png" type="Texture" id=20]
+[ext_resource path="res://sprites/slim_path_top.png" type="Texture" id=21]
+[ext_resource path="res://sprites/slim_path_top_left.png" type="Texture" id=22]
+[ext_resource path="res://sprites/slim_path_top_right.png" type="Texture" id=23]
+[ext_resource path="res://sprites/slim_path_wall_center.png" type="Texture" id=24]
+[ext_resource path="res://sprites/slim_path_wall_left.png" type="Texture" id=25]
+[ext_resource path="res://sprites/slim_path_wall_right.png" type="Texture" id=26]
+[ext_resource path="res://sprites/slim_path_wall_surrounded.png" type="Texture" id=27]
+[ext_resource path="res://sprites/wall_bot.png" type="Texture" id=28]
+[ext_resource path="res://sprites/wall_left.png" type="Texture" id=29]
+[ext_resource path="res://sprites/wall_right.png" type="Texture" id=30]
+[ext_resource path="res://sprites/wall_top.png" type="Texture" id=31]
+
+[node name="Tiles_game" type="Node2D"]
+editor/display_folded = true
+
+[node name="chao_0" type="Sprite" parent="."]
+editor/display_folded = true
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chao_0"]
+
+[node name="chao_1" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 32, 0 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chao_1"]
+
+[node name="chao_2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 64, 0 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chao_2"]
+
+[node name="fundo" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 224, 64 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="fundo"]
+
+[node name="canto_inferior_esquerdo_0" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 224, 32 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 5 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="canto_inferior_esquerdo_0"]
+
+[node name="canto_inferior_esquerdo_1" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 224, 0 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 6 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="canto_inferior_esquerdo_1"]
+
+[node name="canto_inferior_esquerdo_2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 192, 96 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="canto_inferior_esquerdo_2"]
+
+[node name="canto_inferior_direito_0" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 192, 64 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 8 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="canto_inferior_direito_0"]
+
+[node name="canto_inferior_direito_1" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 192, 32 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 9 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="canto_inferior_direito_1"]
+
+[node name="canto_inferior_direito_2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 192, 0 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 10 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="canto_inferior_direito_2"]
+
+[node name="canto_superior_esquerdo_0" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 160, 96 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 11 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="canto_superior_esquerdo_0"]
+
+[node name="canto_superior_esquerdo_1" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 128, 96 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 12 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="canto_superior_esquerdo_1"]
+
+[node name="canto_superior_direito_0" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 160, 64 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 13 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="canto_superior_direito_0"]
+
+[node name="canto_superior_direito_1" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 128, 64 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 14 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="canto_superior_direito_1"]
+
+[node name="conexao_0" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 96, 64 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 15 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="conexao_0"]
+
+[node name="cruzamento_0" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 96, 96 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 16 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cruzamento_0"]
+
+[node name="caminho_0" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 64, 96 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 17 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="caminho_0"]
+
+[node name="caminho_1" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 64, 64 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 18 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="caminho_1"]
+
+[node name="caminho_2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 32, 96 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 19 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="caminho_2"]
+
+[node name="caminho_3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 32, 64 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 20 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="caminho_3"]
+
+[node name="caminho_4" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 0, 96 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 21 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="caminho_4"]
+
+[node name="caminho_5" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 0, 64 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 22 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="caminho_5"]
+
+[node name="caminho_6" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 0, 32 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 23 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="caminho_6"]
+
+[node name="parede_0" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 32, 32 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 24 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="parede_0"]
+
+[node name="parede_1" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 64, 32 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 25 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="parede_1"]
+
+[node name="parede_2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 96, 32 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 26 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="parede_2"]
+
+[node name="parede_3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 128, 32 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 27 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="parede_3"]
+
+[node name="parede_4" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 160, 32 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 28 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="parede_4"]
+
+[node name="parede_5" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 160, 0 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 29 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="parede_5"]
+
+[node name="parede_6" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 128, 0 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 30 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="parede_6"]
+
+[node name="parede_7" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 96, 0 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 31 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="parede_7"]
+

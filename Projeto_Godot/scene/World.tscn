@@ -1,29 +1,38 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://script/player/Player.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://script/seguranca/seguranca.gd" type="Script" id=3]
+[ext_resource path="res://tiles_set/cenario.tres" type="TileSet" id=1]
+[ext_resource path="res://script/player/Player.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://script/seguranca/seguranca.gd" type="Script" id=4]
 
 [node name="World" type="Node2D"]
+
+[node name="TileMap_chao" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 10, 0, 4, 30, 0, 8, 30, 0, 12, 30, 0, 16, 30, 0, 20, 30, 0, 24, 30, 0, 28, 30, 0, 32, 30, 0, 36, 30, 0, 40, 30, 0, 44, 30, 0, 48, 30, 0, 52, 30, 0, 56, 30, 0, 60, 12, 0, 262144, 28, 0, 262204, 29, 0, 393216, 28, 0, 393276, 29, 0, 655360, 28, 0, 655420, 29, 0, 917504, 28, 0, 917564, 29, 0, 1179648, 28, 0, 1179708, 29, 0, 1441792, 28, 0, 1441852, 29, 0, 1703936, 28, 0, 1703996, 29, 0, 1966080, 28, 0, 1966140, 29, 0, 2228224, 4, 0, 2228228, 27, 0, 2228232, 27, 0, 2228236, 27, 0, 2228240, 27, 0, 2228244, 27, 0, 2228248, 27, 0, 2228252, 27, 0, 2228256, 27, 0, 2228260, 27, 0, 2228264, 27, 0, 2228268, 27, 0, 2228272, 27, 0, 2228276, 27, 0, 2228280, 27, 0, 2228284, 7, 0 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
 editor/display_folded = true
 position = Vector2( 352, 224 )
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="Player"]
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="Monstro" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 640, 224 )
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="Monstro"]
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
