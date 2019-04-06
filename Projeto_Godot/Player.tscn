@@ -2,7 +2,7 @@
 
 [ext_resource path="res://script/player/Player.gd" type="Script" id=1]
 [ext_resource path="res://deteccao.gd" type="Script" id=2]
-[ext_resource path="res://sprites/Jornalista/costas.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Jornalista/jornalista_sprite.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 12.4126
@@ -29,12 +29,10 @@ script = ExtResource( 2 )
 position = Vector2( 0, 0.493408 )
 shape = SubResource( 2 )
 
-[node name="sprite_costas" type="Sprite" parent="."]
-position = Vector2( 0, 0.260956 )
+[node name="sprite" type="Sprite" parent="."]
 texture = ExtResource( 3 )
-hframes = 4
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+hframes = 16
+frame = 12
 
 [connection signal="input_event" from="." to="." method="_on_Player_input_event"]
 [connection signal="body_entered" from="deteccao" to="." method="_on_deteccao_body_entered"]

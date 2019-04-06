@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-onready var sprite = $sprite_costas
+onready var sprite = $sprite
 
 var motion = Vector2()
 var velocidade = 200
@@ -18,7 +18,7 @@ var pos_y_atual
 var direcao = 0
 
 var i = 0
-var distancia = 50
+var distancia = 5
 
 func _ready():
 	pos_x_inicial = $".".position.x
@@ -30,15 +30,18 @@ func _ready():
 func _physics_process(delta):
 	motion.x = 0
 	motion.y = 0
-	
+
 	if Input.is_action_pressed("ui_up"):
-		proximo_sprite()		
+		direcao = 1
 		motion.y = -velocidade
 	elif Input.is_action_pressed("ui_down"):
+		direcao = 0
 		motion.y = velocidade
 	elif Input.is_action_pressed("ui_right"):
+		direcao = 2
 		motion.x = velocidade
 	elif Input.is_action_pressed("ui_left"):
+		direcao = 3
 		motion.x = -velocidade
 	elif Input.is_action_just_pressed("ui_select"):
 		if isTransformed:
@@ -48,6 +51,7 @@ func _physics_process(delta):
 			get_node("Sprite").set_texture(transformationTexture)
 			isTransformed = true;
 	move_and_slide(motion)
+	proximo_sprite()	
 
 func _on_deteccao_body_entered(body):
 	if body.get_name() != "Parede":
@@ -56,9 +60,27 @@ func _on_deteccao_body_entered(body):
 	pass
 	
 func proximo_sprite():
-	if abs($".".position.x - pos_x_atual) < distancia || abs($".".position.y - pos_y_atual) < distancia:
+	if abs($".".position.x - pos_x_atual) >= distancia || abs($".".position.y - pos_y_atual) >= distancia:
+		pos_x_atual = $".".position.x
+		pos_y_atual = $".".position.y
 		if direcao == 0:
+			if i < 0 || i > 3:
+				i = 0
 			sprite.frame = i
 			i += 1
-		if i >= 4:
-			i = 0
+		elif direcao == 1:
+			if i < 12 || i > 15:
+				i = 12
+			sprite.frame = i
+			i += 1
+		elif direcao == 2:
+			if i < 4 || i > 7:
+				i = 4
+			sprite.frame = i
+			i += 1
+		else:
+			if i < 8 || i > 11:
+				i = 8
+			sprite.frame = i
+			i += 1
+	print ("a")		
