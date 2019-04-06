@@ -20,6 +20,7 @@ radius = 9.94259
 height = 4.51635
 
 [node name="Cena_00" type="Node2D"]
+editor/display_folded = true
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2( 0.25, 0.25 )
