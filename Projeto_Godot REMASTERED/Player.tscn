@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://script/player/Player.gd" type="Script" id=1]
+[ext_resource path="res://deteccao.gd" type="Script" id=2]
+[ext_resource path="res://sprites/Jornalista/jornalista_sprite.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 12.4126
+height = 6.42525
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 12.906
+height = 5.76738
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 128, 64 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="deteccao" type="Area2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deteccao"]
+position = Vector2( 0, 0.493408 )
+shape = SubResource( 2 )
+
+[node name="sprite" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+hframes = 16
+frame = 3
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+current = true
+
+[connection signal="input_event" from="." to="." method="_on_Player_input_event"]
+[connection signal="body_entered" from="deteccao" to="." method="_on_deteccao_body_entered"]
