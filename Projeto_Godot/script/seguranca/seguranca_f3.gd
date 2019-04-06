@@ -6,7 +6,7 @@ var pos_2
 
 var orientacao = false # true para horizontal, false para vertical
 
-var dist_1 = 400
+var dist_1 = 100
 var dist_2 = 0
 
 var direcao = 0 # direção 0 faz com que o lado da movimentação seja sorteado, 1 move para direita, 2 para a esquerda

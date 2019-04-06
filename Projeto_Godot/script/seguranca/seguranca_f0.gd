@@ -6,7 +6,7 @@ var pos_2
 
 var orientacao = false # true para horizontal, false para vertical
 
-var dist_1 = 400
+var dist_1 = 260
 var dist_2 = 0
 
 var direcao = 0 # direção 0 faz com que o lado da movimentação seja sorteado, 1 move para direita, 2 para a esquerda
@@ -61,17 +61,17 @@ func proximo_sprite():
 	if abs($".".position.x - pos_x_atual) >= distancia || abs($".".position.y - pos_y_atual) >= distancia:
 		pos_x_atual = $".".position.x
 		pos_y_atual = $".".position.y
-		if direcao == 1:
+		if direcao == 1 && !orientacao: # Direita, vertical
 			if i < 0 || i > 3:
 				i = 0
 			sprite.frame = i
 			i += 1
-		elif direcao == 2:
+		elif direcao == 2 && !orientacao: #Esquerda, horizontal
 			if i < 12 || i > 15:
 				i = 12
 			sprite.frame = i
 			i += 1
-		elif direcao == 3:
+		elif direcao == 1 && orientacao:
 			if i < 4 || i > 7:
 				i = 4
 			sprite.frame = i

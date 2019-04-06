@@ -83,4 +83,3 @@ func proximo_sprite():
 				i = 8
 			sprite.frame = i
 			i += 1
-	print ("a")		
