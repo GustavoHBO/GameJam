@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-onready var sprite = $sprite
+onready var sprite = $trajes
 
 var motion = Vector2()
 var velocidade = 200
