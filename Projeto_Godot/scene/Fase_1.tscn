@@ -1,9 +1,24 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://tiles_set/cenario.tres" type="TileSet" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 514.86, 22.6291 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 19.4964, 245.334 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 67.5607, 38.215 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 18.3428, 153.149 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 22.1635, 25.7931 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 28.6566, 40.7292 )
 
 [node name="Fase_1" type="Node2D"]
 
@@ -14,9 +29,43 @@ cell_size = Vector2( 128, 128 )
 format = 1
 tile_data = PoolIntArray( 0, 1073741829, 0, 1, 1073741852, 0, 2, 1073741852, 0, 3, 1073741852, 0, 4, 1073741852, 0, 5, 1073741852, 0, 6, 1073741852, 0, 7, 1073741852, 0, 8, 1073741852, 0, 9, 1073741852, 0, 10, 1073741852, 0, 11, 1073741852, 0, 12, 1073741852, 0, 13, 1073741852, 0, 14, 1073741852, 0, 15, 1073741832, 0, 65536, 1073741853, 0, 65537, 1, 0, 65538, 2, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 3, 0, 65548, 3, 0, 65549, 1, 0, 65550, 1, 0, 65551, 1073741854, 0, 131072, 29, 0, 131073, 1, 0, 131074, 2, 0, 131075, 2, 0, 131076, 2, 0, 131077, 2, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 131081, 1, 0, 131082, 3, 0, 131083, 3, 0, 131084, 1, 0, 131085, 1, 0, 131086, 1, 0, 131087, 30, 0, 196608, 5, 0, 196609, 28, 0, 196610, 14, 0, 196611, 1, 0, 196612, 1, 0, 196613, 2, 0, 196614, 2, 0, 196615, 3, 0, 196616, 3, 0, 196617, 3, 0, 196618, 3, 0, 196619, 1, 0, 196620, 1, 0, 196621, 12, 0, 196622, 28, 0, 196623, 8, 0, 262144, 11, 0, 262145, 31, 0, 262146, 10, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 2, 0, 262151, 1, 0, 262152, 3, 0, 262153, 3, 0, 262154, 3, 0, 262155, 1, 0, 262156, 1, 0, 262157, 7, 0, 262158, 31, 0, 262159, 13, 0, 327680, 1073741838, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 2, 0, 327688, 3, 0, 327689, 3, 0, 327690, 2, 0, 327691, 2, 0, 327692, 2, 0, 327693, 2, 0, 327694, 1, 0, 327695, 1073741854, 0, 393216, 1073741825, 0, 393217, 1, 0, 393218, 1, 0, 393219, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393223, 2, 0, 393224, 2, 0, 393225, 2, 0, 393226, 2, 0, 393227, 3, 0, 393228, 3, 0, 393229, 3, 0, 393230, 1, 0, 393231, 1073741854, 0, 458752, 1073741834, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 1, 0, 458766, 1, 0, 458767, 1073741854, 0, 524288, 1073741835, 0, 524289, 1073741855, 0, 524290, 1073741855, 0, 524291, 1073741855, 0, 524292, 1073741855, 0, 524293, 1073741855, 0, 524294, 1073741855, 0, 524295, 1073741855, 0, 524296, 1073741855, 0, 524297, 1073741855, 0, 524298, 1073741855, 0, 524299, 1073741855, 0, 524300, 1073741855, 0, 524301, 1073741855, 0, 524302, 1073741855, 0, 524303, 1073741837, 0 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Parede" type="StaticBody2D" parent="."]
+editor/display_folded = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parede"]
 position = Vector2( 510.638, 550.952 )
 shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Parede"]
+position = Vector2( 510.638, 23.0363 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Parede"]
+position = Vector2( 1005.96, 290.736 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Parede"]
+position = Vector2( 919.964, 253.126 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Parede"]
+position = Vector2( 101.063, 255.673 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Parede"]
+position = Vector2( 16.5563, 194.855 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Parede"]
+position = Vector2( 20.377, 501.784 )
+shape = SubResource( 5 )
+
+[node name="porta_2" type="Area2D" parent="."]
+position = Vector2( 26.6592, 419.195 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="porta_2"]
+shape = SubResource( 6 )
 
