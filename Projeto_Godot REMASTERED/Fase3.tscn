@@ -6,4 +6,5 @@
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
+format = 1
 

@@ -52,12 +52,6 @@ func _physics_process(delta):
 			isTransformed = true;
 	move_and_slide(motion)
 	proximo_sprite()	
-
-func _on_deteccao_body_entered(body):
-	if body.get_name() != "Parede":
-		$".".position.x = pos_x_inicial
-		$".".position.y = pos_y_inicial
-	pass
 	
 func proximo_sprite():
 	if abs($".".position.x - pos_x_atual) >= distancia || abs($".".position.y - pos_y_atual) >= distancia:
@@ -83,3 +77,15 @@ func proximo_sprite():
 				i = 8
 			sprite.frame = i
 			i += 1
+
+func _on_Player_input_event(viewport, event, shape_idx):
+	pass # Replace with function body.
+
+
+func _on_Area2D_body_entered(body):
+	print(body.get_name())
+	if body.get_name() != "TileMap":
+		$".".position.x = pos_x_inicial
+		$".".position.y = pos_y_inicial
+		
+	pass # Replace with function body.
