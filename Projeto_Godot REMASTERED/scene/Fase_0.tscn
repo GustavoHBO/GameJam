@@ -1,0 +1,99 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://tiles_set/cenario.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://porta.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scene/Guarda.tscn" type="PackedScene" id=4]
+[ext_resource path="res://script/seguranca/seguranca_f0.gd" type="Script" id=5]
+[ext_resource path="res://script/seguranca/seguranca_f1.gd" type="Script" id=6]
+[ext_resource path="res://script/seguranca/seguranca_f2.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 511.383, 17.5365 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 20.2337, 136.103 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 29.7213, 78.7162 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 498.04, 24.3843 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 245.456, 34.9032 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 42.6252, 87.7972 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 20.2726, 143.234 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 54.0674, 29.8106 )
+
+[node name="Fase_0" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( 0, 11, 0, 1, 31, 0, 2, 31, 0, 3, 31, 0, 4, 31, 0, 5, 31, 0, 6, 1073741852, 0, 7, 1073741852, 0, 8, 1073741852, 0, 9, 1073741852, 0, 10, 31, 0, 11, 31, 0, 12, 31, 0, 13, 31, 0, 14, 31, 0, 15, 13, 0, 16, 1073741825, 0, 65536, 29, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1073741827, 0, 65542, 1073741825, 0, 65543, 1073741825, 0, 65544, 1, 0, 65545, 1073741824, 0, 65546, 1, 0, 65547, 1, 0, 65548, 1, 0, 65549, 1, 0, 65550, 1073741824, 0, 65551, 1073741854, 0, 65552, 1073741825, 0, 131072, 29, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1073741827, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1073741825, 0, 131079, 1073741825, 0, 131080, 1, 0, 131081, 1073741831, 0, 131082, 1073741834, 0, 131083, 1073741824, 0, 131084, 1073741824, 0, 131085, 1073741824, 0, 131086, 1073741824, 0, 131087, 1073741854, 0, 131088, 1073741825, 0, 196608, 29, 0, 196609, 0, 0, 196610, 1073741826, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 1073741825, 0, 196615, 1073741825, 0, 196616, 1073741824, 0, 196617, 1073741854, 0, 196618, 1073741853, 0, 196619, 1073741825, 0, 196620, 1073741826, 0, 196621, 1073741825, 0, 196622, 1073741826, 0, 196623, 1073741854, 0, 196624, 1073741825, 0, 327679, 1073741852, 0, 262144, 1073741838, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 1073741825, 0, 262151, 1073741825, 0, 262152, 1073741824, 0, 262153, 1073741854, 0, 262154, 1073741835, 0, 262155, 1073741855, 0, 262156, 1073741855, 0, 262157, 1073741855, 0, 262158, 1073741855, 0, 262159, 1073741837, 0, 262160, 1073741825, 0, 393215, 1073741825, 0, 327680, 1073741825, 0, 327681, 1073741825, 0, 327682, 0, 0, 327683, 1073741825, 0, 327684, 1073741825, 0, 327685, 1073741825, 0, 327686, 1073741825, 0, 327687, 1073741825, 0, 327688, 1073741824, 0, 327689, 1073741836, 0, 327690, 1073741852, 0, 327691, 1073741852, 0, 327692, 1073741852, 0, 327693, 1073741852, 0, 327694, 1073741852, 0, 327695, 1073741852, 0, 327696, 1073741852, 0, 458751, 1073741855, 0, 393216, 1073741834, 0, 393217, 1073741825, 0, 393218, 0, 0, 393219, 1073741825, 0, 393220, 1073741825, 0, 393221, 1073741825, 0, 393222, 1073741825, 0, 393223, 1073741826, 0, 393224, 1073741824, 0, 393225, 1073741824, 0, 393226, 1073741827, 0, 393227, 1073741824, 0, 393228, 1073741824, 0, 393229, 1073741824, 0, 393230, 1073741824, 0, 393231, 1073741826, 0, 393232, 1073741825, 0, 458752, 29, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 1073741824, 0, 458760, 1073741824, 0, 458761, 1073741827, 0, 458762, 1073741824, 0, 458763, 1073741824, 0, 458764, 1073741824, 0, 458765, 1073741824, 0, 458766, 1073741827, 0, 458767, 1073741831, 0, 458768, 1073741855, 0, 524288, 5, 0, 524289, 1073741855, 0, 524290, 1073741855, 0, 524291, 1073741855, 0, 524292, 1073741855, 0, 524293, 1073741855, 0, 524294, 1073741855, 0, 524295, 1073741855, 0, 524296, 1073741855, 0, 524297, 1073741855, 0, 524298, 1073741855, 0, 524299, 1073741855, 0, 524300, 1073741855, 0, 524301, 1073741855, 0, 524302, 1073741855, 0, 524303, 1073741837, 0, 524304, 1073741825, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 55.2949, 347.719 )
+
+[node name="Area2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7.5603, 352.554 )
+
+[node name="Parede" type="StaticBody2D" parent="."]
+editor/display_folded = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parede"]
+position = Vector2( 509.737, 20.5624 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Parede"]
+position = Vector2( 19.1969, 143.977 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Parede"]
+position = Vector2( 25.4513, 495.126 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Parede"]
+position = Vector2( 525.584, 551.124 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Parede"]
+position = Vector2( 842.843, 320.725 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Parede"]
+position = Vector2( 638.732, 242.124 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Parede"]
+position = Vector2( 1009.94, 146.316 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Parede"]
+position = Vector2( 1034.55, 503.263 )
+shape = SubResource( 8 )
+
+[node name="Guarda" parent="." instance=ExtResource( 4 )]
+position = Vector2( 527.86, 83.1607 )
+script = ExtResource( 5 )
+
+[node name="Guarda2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 727.609, 87.1825 )
+script = ExtResource( 6 )
+
+[node name="Guarda3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 96.1893, 419.65 )
+script = ExtResource( 7 )
+
