@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://sprites/backgrounds/inicio1.png" type="Texture" id=1]
+[ext_resource path="res://scene/Button1.gd" type="Script" id=2]
+[ext_resource path="res://fontPixel.tres" type="DynamicFont" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+stretch_mode = 6
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -112.701
+margin_top = -62.7981
+margin_right = -47.7013
+margin_bottom = -42.7981
+text = "Próximo"
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 710.892
+margin_top = 44.2874
+margin_right = 1183.89
+margin_bottom = 465.287
+custom_fonts/font = ExtResource( 3 )
+text = "Em aproximadamente 2700 a.c. os dois irmãos, Makifh, mais novo, e Gulaph, mais velho,  príncipes do planeta  Meouwpiq,  estavam em uma missão pelo sistema solar, próximo a terra.
+"
+align = 1
+valign = 1
+autowrap = true
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
