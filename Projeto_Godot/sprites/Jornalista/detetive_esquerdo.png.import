@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Laser Barricade.png-3abb1846f72f5c1ec127f5d2c2a61793.stex"
+path="res://.import/detetive_esquerdo.png-150397f2c0a63ecbb9f9333d933fb598.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Laser Barricade.png"
-dest_files=[ "res://.import/Laser Barricade.png-3abb1846f72f5c1ec127f5d2c2a61793.stex" ]
+source_file="res://sprites/Jornalista/detetive_esquerdo.png"
+dest_files=[ "res://.import/detetive_esquerdo.png-150397f2c0a63ecbb9f9333d933fb598.stex" ]
 
 [params]
 

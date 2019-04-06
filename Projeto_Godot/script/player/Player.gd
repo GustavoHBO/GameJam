@@ -1,7 +1,14 @@
 extends KinematicBody2D
 
 var motion = Vector2()
-var velocidade = 100
+var velocidade = 200
+
+var pos_x_inicial
+var pos_y_inicial
+
+func _ready():
+	pos_x_inicial = $".".position.x
+	pos_y_inicial = $".".position.y
 
 func _physics_process(delta):
 	motion.x = 0
@@ -17,3 +24,9 @@ func _physics_process(delta):
 		motion.x = -velocidade
 	
 	move_and_slide(motion)
+
+func _on_deteccao_body_entered(body):
+	if body.get_name() != "Parede":
+		$".".position.x = pos_x_inicial
+		$".".position.y = pos_y_inicial
+	pass

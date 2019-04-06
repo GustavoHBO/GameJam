@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://script/player/Player.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://deteccao.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16.9526, 15.8095 )
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 128, 64 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+polygon = PoolVector2Array( 11.9432, 12.6283, 32.4482, 30.5702, 33.089, 2.37585, 31.8074, -30.9448, 1.0499, -30.304, -32.2707, -29.6632, -32.2707, 0.453506, -31.6299, 29.9294, -1.51323, 30.5702, 32.4482, 31.211, 31.8074, 31.211 )
+
+[node name="deteccao" type="Area2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deteccao"]
+shape = SubResource( 1 )
+
+[connection signal="input_event" from="." to="." method="_on_Player_input_event"]
+[connection signal="body_entered" from="deteccao" to="." method="_on_deteccao_body_entered"]

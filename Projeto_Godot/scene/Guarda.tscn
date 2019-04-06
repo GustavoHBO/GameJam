@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[node name="Guarda" type="Node2D"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+contacts_reported = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+polygon = PoolVector2Array( 0, 0, 0, 32, 32, 32, 32, -32, -32, -32, -32, 32, 0, 32 )
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+

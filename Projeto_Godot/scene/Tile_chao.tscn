@@ -33,7 +33,6 @@
 [ext_resource path="res://sprites/wall_top.png" type="Texture" id=31]
 
 [node name="Tiles_game" type="Node2D"]
-editor/display_folded = true
 
 [node name="chao_0" type="Sprite" parent="."]
 editor/display_folded = true
