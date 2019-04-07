@@ -1,4 +1,4 @@
-extends Button
+extends Node2D
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -13,6 +13,6 @@ func _ready():
 #	pass
 
 
-func _on_Button_pressed():
-	get_tree().change_scene("res://Cenas/Cena_00.tscn")
+func _on_Timer_timeout():
+	get_tree().change_scene("res://scene/FINALnovo.tscn")
 	pass # Replace with function body.

@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=2]
-
-[ext_resource path="res://arcadefont.tres" type="DynamicFont" id=1]
+[gd_scene load_steps=2 format=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0313726, 0.00784314, 0.0862745, 1 )
@@ -24,7 +22,6 @@ margin_top = -157.5
 margin_right = 366.0
 margin_bottom = 157.5
 custom_styles/normal = SubResource( 1 )
-custom_fonts/font = ExtResource( 1 )
 text = "Ao iniciar o áudio da caixa, Viktart houve a voz de seu falecido marido, em um diálogo com Makifh. Após de cerca de um minuto, Viktart, em prantos, descobre a verdade: Seu marido fora assassinado por Makifh, que, tomado pela ganância, sabotou a nave e partiu para a casa, onde finalmente tomou o trono de seu planeta. "
 align = 1
 valign = 1

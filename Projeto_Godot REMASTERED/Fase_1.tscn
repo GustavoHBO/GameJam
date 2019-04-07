@@ -9,15 +9,13 @@
 [ext_resource path="res://script/guarda/guarda_10.gd" type="Script" id=7]
 [ext_resource path="res://script/porta2.gd" type="Script" id=8]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://sprites/artefatos.png" type="Texture" id=10]
 
 [sub_resource type="CapsuleShape2D" id=1]
 height = 5.72861
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16.8632, 24.8342 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 12.8754, 18 )
 
 [node name="Fase_1" type="Node2D"]
 
@@ -60,7 +58,6 @@ shape = SubResource( 1 )
 
 [node name="Guarda_08" type="StaticBody2D" parent="."]
 editor/display_folded = true
-visible = false
 position = Vector2( 859.973, 244.951 )
 script = ExtResource( 5 )
 __meta__ = {
@@ -76,7 +73,6 @@ shape = SubResource( 1 )
 
 [node name="Guarda_09" type="StaticBody2D" parent="."]
 editor/display_folded = true
-visible = false
 position = Vector2( 146.19, 139.466 )
 script = ExtResource( 6 )
 __meta__ = {
@@ -92,7 +88,6 @@ shape = SubResource( 1 )
 
 [node name="Guarda_10" type="StaticBody2D" parent="."]
 editor/display_folded = true
-visible = false
 position = Vector2( 318.482, 197.482 )
 script = ExtResource( 7 )
 __meta__ = {
@@ -107,7 +102,6 @@ hframes = 16
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -117,10 +111,18 @@ shape = SubResource( 2 )
 [node name="Player" parent="." instance=ExtResource( 9 )]
 position = Vector2( 43.9099, 49.3634 )
 
-[node name="RigidBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 13.1722, 48.4977 )
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 0.5, 0.5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource( 3 )
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 810.949, 64.8156 )
+texture = ExtResource( 10 )
+hframes = 4
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 379.85, 64.8156 )
+texture = ExtResource( 10 )
+hframes = 4
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

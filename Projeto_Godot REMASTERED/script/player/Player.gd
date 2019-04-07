@@ -83,8 +83,7 @@ func _on_Player_input_event(viewport, event, shape_idx):
 
 
 func _on_Area2D_body_entered(body):
-	print(body.get_name())
-	if body.get_name() != "TileMap":
+	if body.get_name() != "TileMap" && body.get_name() != "Caixa Preta":
 		$".".position.x = pos_x_inicial
 		$".".position.y = pos_y_inicial
 		
